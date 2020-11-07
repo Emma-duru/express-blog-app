@@ -1,0 +1,12 @@
+<h1 class="text-center mt-4"><%= blogpost.title %></h1>
+<small class="text-muted">Posted by <%= blogpost.author %></small>
+
+<div class="my-4">
+    <%= blogpost.body %>
+</div>
+
+
+<div class="my-2">
+    <a href="/update/<%= blogpost._id %>" class="btn btn-info">Edit</a>
+    <a href="/delete/<%= blogpost._id %>" class="btn btn-danger">Delete</a>
+</div>

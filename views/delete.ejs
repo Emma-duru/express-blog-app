@@ -1,0 +1,9 @@
+<h1 class="text-center my-4">Delete post</h1>
+
+<p class="text-center">Are you sure you want to delete <strong>"<%= blogpost.title %>"</strong>?</p>
+
+
+<form action="/delete/<%= blogpost._id %>" method="POST" class="my-4 text-center">
+    <input type="submit" class="btn btn-danger" value="Yes, I want to delete the post">
+    <a href="/" class="btn btn-info">No, I want to go back</a>
+</form>
