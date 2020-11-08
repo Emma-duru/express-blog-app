@@ -10,6 +10,8 @@ This is a CRUD blog app made with NodeJS, Express and MongoDB
 * [ejs](https://ejs.co)
 * [body-parser](https://www.npmjs.com/package/body-parser)
 * [dotenv](https://www.npmjs.com/package/dotenv)
+* [async](https://www.npmjs.com/package/async)
+* [luxon](https://www.npmjs.com/package/luxon)
 
 ## How to run
 
