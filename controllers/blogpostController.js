@@ -1,14 +1,24 @@
 const BlogPost = require("../models/blogpost");
+const async = require("async");
 
 exports.blogpost_list = (req, res) => {
-  BlogPost.find({}, (err, blogposts) => {
+  async.parallel({
+    blogposts: (callback) => {
+      BlogPost.find({}, callback)
+    },
+    blogpost_count: (callback) => {
+      BlogPost.countDocuments({}, callback)
+    }
+  }, (err, result) => {
     if (err) throw err;
     res.render("base", {
-      blogposts: blogposts,
+      blogposts: result.blogposts,
+      blogpost_count: result.blogpost_count,
       title: "Home",
       route: "index",
     });
-  });
+  })
+
 };
 
 exports.blogpost_create_get = (req, res) => {
