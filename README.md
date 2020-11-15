@@ -2,6 +2,8 @@
 
 This is a CRUD blog app made with NodeJS, Express and MongoDB
 
+The project is live at [https://express-blog-app-2020.herokuapp.com/](https://express-blog-app-2020.herokuapp.com/)
+
 ## Packages used
 
 * [node](https://nodejs.org)
